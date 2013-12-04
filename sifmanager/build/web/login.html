@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>SisInfor Tecnologia [ Avalia&ccedil;&atilde;o de funcion&aacute;rio ]</title>		
+<link rel="stylesheet" href="estilo/estilo-principal.css" type="text/css" media="screen" charset="utf-8" />
+<style>body {background: #f6f6f6 url(estilo/bg-pagina-login.png) center top no-repeat;}</style>
+<script type="text/javascript" src="js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="js/vibrate.js"></script>
+
+</head>
+
+<body>
+<div><a href="#" class="logotipo"></a></div>
+<div style="width: 500px; margin: 0 auto;"><h1>Sistema de Avaliação Individual</h1></div>
+<div class="login" id="login">
+            <form action="" method="post" id="loginform">
+<table width="240" border="0" cellspacing="0" cellpadding="0" align="center">
+                <tr>
+                  <td width="58" align="right">&nbsp;</td>
+                  <td width="25" height="20" rowspan="4" align="center"><img name="" src="./estilo/linhah.jpg" width="1" height="100" alt="" /></td>
+                  <td width="157" height="18">&nbsp;</td>
+                </tr>
+                <tr>
+                  <td width="58" align="right"><label for="username"><strong>Login</strong></label></td>
+                  <td width="157" height="30"><input type="text" name="username" id="username" /></td>
+              </tr>
+                <tr>
+                  <td width="58" align="right"><label for="pwd"><strong>Senha</strong></label></td>
+                  <td width="157" height="30"><input type="password" name="pwd" id="pwd" /></td>
+                </tr>
+                <tr>
+                  <td width="58" align="right">&nbsp;</td>
+                  <td width="157" height="35" valign="top"><input type="button" name="Submit" id="submit_butt" value="Entrar" /><input type="reset" name="limpar" id="limpar_butt" value="Limpar" /></td>
+              </tr>
+          </table>
+
+            <div></div>
+            </form>
+        </div>
+
+
+<br/><br/><br/><br/>
+<div class="rodape">
+<p>SisInfor Tecnologia © Todos os Direitos Reservados</p>
+</div>
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+	$("#submit_butt").click( function() {
+		
+		// configurações para o efeito de zumbido
+		var conf = {
+				frequency: 5000,
+				spread: 5,
+				duration: 800
+			};
+		
+		/* fazer a chamada AJAX e processamento aqui
+			....
+			....
+		*/
+		
+		// Este é o apelo que fazemos quando a função de callback AJAX indica uma falha de login 
+		$("#login").vibrate(conf);
+		
+		// vamos também apresentar uma notificação
+		if($("#errormsg").text() == "")
+			$("#loginform").append('<p id="errormsg">Nome ou senha inválida!</p>');
+			
+		// limpar os campos
+		
+		$("#username").val("");
+		$("#pwd").val("");
+	});
+	
+});
+
+
+</script>
+			
+</body>
+</html>

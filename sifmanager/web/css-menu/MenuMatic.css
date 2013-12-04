@@ -1,0 +1,146 @@
+#nav a, #subMenusContainer a{
+	text-decoration:none;
+	display:block;
+	padding:10px 20px;
+	-moz-border-radius: 7px;
+	-webkit-border-radius: 7px;
+	font-weight: bold;color:#FFF;
+	font-size: 18px;
+}
+
+#nav a{
+	margin:0; color: #555555;
+	float:left; 
+}
+
+/* Sublink dos menus */
+#subMenusContainer a, #nav li li a{
+	text-align:left; font-size: 16px;
+}
+
+/* Todos os links on hover ou focus */
+#nav a:hover, #nav a:focus, #subMenusContainer a:hover, #subMenusContainer a:focus, #nav a.mainMenuParentBtnFocused, #subMenusContainer a.subMenuParentBtnFocused{
+	color:#FFF;
+}
+
+/* sub links do menu ao passar ou foco */
+#subMenusContainer a:hover, 
+#subMenusContainer a:focus, 
+#nav a.mainMenuParentBtnFocused, 
+#subMenusContainer a.subMenuParentBtnFocused,
+#nav li a:hover,
+#nav li a:focus{
+	background:#999;
+	color:#eee;
+}
+
+
+.subMenuParentBtn{ 
+	background: url(../css-menu/img/arrow_right.gif) right center no-repeat;  
+}
+
+.subMenuParentBtnFocused{ 
+	background: url(../css-menu/img/arrow_right_over.gif) right center no-repeat;  
+}
+
+.mainMenuParentBtn{	
+	 background: url(../css-menu/img/arrow_down.gif) right center no-repeat; 
+}
+
+.mainMenuParentBtnFocused{	
+	background: url(../css-menu/img/arrow_down_over.gif) right center no-repeat; 
+}
+
+
+/* Submenu Outer Wrapper - cada um submenu está dentro de uma div com esta classe */
+.smOW{ 
+	display:none; 
+	position: absolute; 
+	overflow:hidden; 
+	/*o preenchimento 2px esquerda e direita permite que você tenha uma borda de 1px
+no interior ou ol ul desde estouro está definido para * escondidas*/
+	padding:0 2px;
+	margin:0 0 0 -2px;
+}
+
+
+/* Todas as uls e OLs */
+#nav, #nav ul, #nav ol, #subMenusContainer ul, #subMenusContainer ol { 
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	line-height: 1em;
+}
+
+/* todos submenu OLs e ULs */
+#nav ol, #nav ul, #subMenusContainer ul, #subMenusContainer ol {	
+	/*borda ao redor submenu vai aqui*/	 
+	-moz-border-radius: 8px;
+	-webkit-border-radius: 8px;
+	background:#fff;	
+	border:1px solid #999;
+	left:0;
+}
+
+
+/*Lista de itens no menu principal]  */
+#nav li { 
+	/*ótimo lugar para usar uma imagem de fundo como um divisor*/
+	display:block;
+	list-style:none;
+	position:relative;
+	float:left;
+}
+
+#subMenusContainer li, #subMenusContainer li a{
+	list-style: none; background: #f6f6f6; color: #666;
+}
+
+
+/*menu principal elment ou ol ul */
+#nav{
+	display:block;
+	list-style:none;
+	margin:0 0 0 0;
+	z-index:5;
+	top:15px;
+	left:0;
+	text-align: center;
+	display:block;
+}
+
+#subMenusContainer{	display:block; 	position:absolute;	top:0;	left:0;	width:100%;	height:0;	overflow:visible;	z-index:1000000000; }
+
+
+/* --------------------------[ apenas para usuários não-javscript ]--------------------------*/
+#nav li li{	float:none; }
+
+#nav li li a{ /* Apenas links submenu*/	
+	position:relative;
+	float:none;
+}
+
+#nav li ul { /* listas de segundo nível */
+	position: absolute;
+	width: 13em;
+	margin-left: -1000em; /* utilizando esquerda em vez de mostrar para esconder menus, pois display: none não é lido por leitores de tela */
+	margin-top:2.6em; 
+}
+
+/* lists */
+#nav li ul ul { margin: -1em 0 0 -1000em; }
+#nav li:hover ul ul {	margin-left: -1000em; }
+
+ /* listas aninhadas em itens de lista */
+#nav li:hover ul{	margin-left: 0; }
+#nav li li:hover ul {	margin-left: 13em; margin-top:-2.5em;}
+
+/*regras extra  de posicionamento de acessibilidade limitada noscript teclado */
+#nav li a:focus + ul {  margin-left: 0; margin-top:2.2em; }
+#nav li li a:focus + ul { left:0; margin-left: 1010em; margin-top:-2.2em;}
+#nav li li a:focus {left:0;  margin-left:1000em; width:10em;  margin-top:0;}
+#nav li li li a:focus {left:0; margin-left: 2010em; width: 10em;  margin-top:-1em;}
+#nav li:hover a:focus{ margin-left: 0; }
+#nav li li:hover a:focus + ul { margin-left: 10em; }
+
+#nav li ul {background:#f6f6f6;}

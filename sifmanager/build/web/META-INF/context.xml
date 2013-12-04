@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/sifmanager">
+  <Resource auth="Container" 
+            driverClassName="com.mysql.jdbc.Driver" 
+            maxActive="20" maxIdle="10" maxWait="60000" 
+            name="jdbc/bdmanager" 
+            password="desenv123@" 
+            removeAbandoned="true" 
+            removeAbandonedTimeout="60" 
+            testWhileIdle="true" 
+            timeBetweenEvictionRunsMillis="60000" 
+            type="javax.sql.DataSource" 
+            url="jdbc:mysql://www.sisinfor.com.br/sisinfor_manager" 
+            username="sisinfor_dev" validationQuery="SELECT 1"/>
+</Context>

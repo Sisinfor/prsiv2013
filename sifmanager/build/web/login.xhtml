@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>SisInfor Tecnologia [ SIF Manager ]</title>
+        <link rel="stylesheet" href="estilo/estilo-principal.css" type="text/css" media="screen" charset="utf-8" />
+        <style>body {background: #f6f6f6 url(estilo/bg-pagina-login.png) center top no-repeat;}</style>
+    </h:head>
+    <h:body>
+    <h:form id="form1">
+        <div><a href="#" class="logotipo"></a></div>
+        <div style="width: 500px; margin: 0 auto;"><h1>SisInfor Tecnologia Manager</h1></div>
+        <center>
+            <p:ajaxStatus style="width:16px;height:16px;text-align: center;">
+                <f:facet name="start">
+                    <h:graphicImage value="estilo/ajaxloader.gif" />
+                </f:facet>
+                <f:facet name="complete">
+                    <h:outputText value="" />
+                </f:facet>
+            </p:ajaxStatus>
+        </center>
+
+        <p:growl id="growl" showDetail="true" sticky="true" />  
+
+        <div class="login" id="login">
+                
+                <table width="240" border="0" cellspacing="0" cellpadding="0" align="center">
+                        <tr>
+                          <td width="58" align="right">&nbsp;</td>
+                          <td width="25" height="20" rowspan="4" align="center"><img name="" src="./estilo/linhah.jpg" width="1" height="100" alt="" /></td>
+                          <td width="157" height="18">&nbsp;</td>
+                        </tr>
+                        <tr>
+                          <td width="58" align="right"><label for="username"><strong>Login</strong></label></td>
+                          <td width="157" height="30"><p:inputText id="username" value="#{loginControl.login}" size="14"/></td>
+                      </tr>
+                        <tr>
+                          <td width="58" align="right"><label for="pwd"><strong>Senha</strong></label></td>
+                          <td width="157" height="30"><p:password id="pwd" value="#{loginControl.senha}" size="14"/></td>
+                        </tr>
+                        <tr>
+                          <td width="58" align="right">&nbsp;</td>
+                          <td width="157" height="35" valign="top"><p:commandButton value="Entrar" action="#{loginControl.logar()}" update="growl" /></td>
+                      </tr>
+                  </table>
+
+                    <div></div>
+                    
+        </div>
+
+
+        <br/><br/><br/><br/>
+        <div class="rodape">
+        <p>SisInfor Tecnologia © Todos os Direitos Reservados</p>
+        </div>
+    </h:form>
+    </h:body>
+</html>
+

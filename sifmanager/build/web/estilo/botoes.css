@@ -1,0 +1,49 @@
+.apagar {   background-image: url("../imagens/delete.png") !important; }
+
+.negar {   background-image: url("../imagens/negar-16.png") !important; }
+
+.gravar {   background-image: url("../imagens/disk.png") !important;   }
+
+.imprimir { background-image: url("../imagens/print.png") !important; }
+
+.sair {     background-image: url("../imagens/porta.png") !important; }
+
+.ver {      background-image: url("../imagens/search.png") !important;  }
+
+.aprov {    background-image: url("../img/accept.png") !important;   }
+
+.cancela {  background-image: url("../img/cancel.png") !important;    }
+
+.enviardoc {  background-image: url("../imagens/enviardoc.png") !important;    }
+
+.listar {  background-image: url("../imagens/listar.png") !important;    }
+
+.novo {  background-image: url("../imagens/novo.png") !important;    }
+
+.editar {  background-image: url("../imagens/pencil.png") !important;    }
+
+.calculadora {      background-image: url("../imagens/calculadora-16.png") !important;  }
+
+.destaq {  background-color: #ffcc00 !important;
+           background-image: none !important;
+           color: #000000 !important;    }
+
+.teste1 {  background-color: #ffcc00 !important;
+           background-image: none !important;
+           color: #000000 !important;       }
+
+.teste2 {  background-color: #0000cc  !important;
+           background-image: none !important;
+           color: #000000 !important;       }
+.ui-widget {
+    font-size: 12px !important;
+}
+
+.ui-layout-west {
+    z-index:20 !important;
+    overflow:visible !important;;
+}
+
+.ui-layout-west .ui-layout-unit-content {
+    overflow:visible !important;
+}
